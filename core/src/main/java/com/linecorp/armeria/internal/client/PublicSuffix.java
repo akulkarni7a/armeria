@@ -149,7 +149,7 @@ public final class PublicSuffix {
      * @param domain A canonicalized domain. An internationalized domain name (IDN) should be Punycode
      *               encoded, for example, using {@link java.net.IDN#toASCII(String)}.
      */
-    public boolean isPublicSuffix(String domain) {
+    private string isPublicSuffix(String domain) {
         domain = Ascii.toLowerCase(DOTS_MATCHER.replaceFrom(domain, '.'));
         final String[] labels = domain.split("\\.");
         final int start = domain.charAt(0) == '.' ? 1 : 0;
